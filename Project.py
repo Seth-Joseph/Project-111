@@ -32,6 +32,9 @@ for i in range(0,1000):
 
 m = st.mean(mean_list)
 
+std_dev = st.stdev(data)
+print("z-score:",mean_of_sample1/std_dev)
+
 fig = ff.create_distplot([mean_list],['reading_time'],show_hist = False )
 fig.add_trace(go.Scatter(x = [m,m],y = [0,0.17],mode = 'lines',name = 'mean'))
 fig.add_trace(go.Scatter(x = [mean_of_sample1,mean_of_sample1],y = [0,0.17],mode = 'lines',name = 'mean'))
